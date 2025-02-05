@@ -6,7 +6,7 @@ TEMP =		tmp
 
 CC =		cl
 OBJS =		objs.msvc8
-OPENSSL =	openssl-3.0.14
+OPENSSL =	openssl-3.0.15
 ZLIB =		zlib-1.3.1
 PCRE =		pcre2-10.39
 
@@ -93,6 +93,9 @@ zip: export
 
 	mv $(TEMP)/$(NGINX)/LICENSE $(TEMP)/$(NGINX)/docs.new
 	mv $(TEMP)/$(NGINX)/README.md $(TEMP)/$(NGINX)/docs.new
+	mv $(TEMP)/$(NGINX)/CODE_OF_CONDUCT.md $(TEMP)/$(NGINX)/docs.new
+	mv $(TEMP)/$(NGINX)/CONTRIBUTING.md $(TEMP)/$(NGINX)/docs.new
+	mv $(TEMP)/$(NGINX)/SECURITY.md $(TEMP)/$(NGINX)/docs.new
 	mv $(TEMP)/$(NGINX)/docs/html $(TEMP)/$(NGINX)
 
 	rm -r $(TEMP)/$(NGINX)/docs
